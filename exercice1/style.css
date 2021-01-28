@@ -1,0 +1,73 @@
+body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	-webkit-animation: gradient 15s ease infinite;
+	        animation: gradient 15s ease infinite;
+}
+
+@-webkit-keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+/* Style du titre, des labels et du paragraphe */
+    p , h2, label {
+      color: #6B6B6A;
+      font-weight: normal ;
+      font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    }
+
+    h2 {
+      color : rgba(240,173,78,1) ; 
+      font-family : "Tahoma";
+      font-weight : 450 ; 
+      margin-bottom : 30px ;
+    }
+
+    /* Pour laisser un espace au dessus et en dessous de la fenetre */
+    .container {
+      padding-top : 20px ;
+      padding-bottom : 10px;
+    }
+    
+    /* Pour réduire la taille de la fenêtre */
+    img {
+      width:40%;
+      margin-bottom : -30px ;
+    }
+
+    /* Couleur de la signature */
+    #footerlabel {
+      color : white ; 
+    }
+
+    /* Couleur du text (*) Champ obligatoire */
+    #champOblig {
+        color : black ;
+        font-style:italic ; 
+        font-family : "Segoe UI" ;
+    }
+
+
+#buttonreset {
+        margin-bottom: 5px ; 
+    }

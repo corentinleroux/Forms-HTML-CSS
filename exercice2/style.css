@@ -1,0 +1,157 @@
+body {
+	background-image: linear-gradient( 122.3deg,  rgba(111,71,133,1) 14.6%, rgba(232,129,166,1) 29.6%, rgba(237,237,183,1) 42.1%, rgba(244,166,215,1) 56.7%, rgba(154,219,232,1) 68.7%, rgba(238,226,159,1) 84.8% );
+	background-size: 400% 400%;
+	-webkit-animation: gradient 15s ease infinite;
+	animation: gradient 15s ease infinite;
+}
+
+@-webkit-keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+/* Pour laisser un espace au dessus et en dessous de la fenetre */
+.container {
+	padding-top : 20px ;
+	padding-bottom : 10px;
+}
+
+/* Pour les paragraphes, labels et spans */
+p , h2, label {
+	color: #6B6B6A;
+	font-weight: normal ;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: 13px; 
+}
+
+/* Pour les lignes horizontales */
+hr{
+	border-color: #bfbfbf;
+	opacity: 50% ;
+}
+
+/* Pour les spans */
+span {
+	font-weight: bold ;
+	color: white;
+}
+
+span.spanclass {
+	color: rgba(240,173,78,1) ;
+	font-weight: bold ;
+}
+
+/* Pour le titre */
+h2 {
+	font-family: "Trebuchet MS", Helvetica, sans-serif ;
+	font-size:24px;
+	color : rgba(240,173,78,1) ; 
+	padding-bottom : 10px;
+}
+
+/* Couleur de la signature */
+#footerlabel {
+	color : black ; 
+	padding-bottom : 10px;
+}
+
+
+/* --------------  Pour le changement des checkbox -------------- */
+/* https://www.w3schools.com/howto/howto_css_custom_checkbox.asp */
+
+/* The container */
+.containercheckbox {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 14px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.containercheckbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.containercheckbox:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.containercheckbox input:checked ~ .checkmark {
+  background-color: rgb(240,173,78);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.containercheckbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.containercheckbox .checkmark:after {
+  left: 6px;
+  top: 3px;
+  width: 8px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+  outline : solid 1px grey ; 
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <!-- Thème Bootstrap -->
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"> 
+
+  <!-- Code JS pour le traitement du formulaire -->
+  <script src="calcul.js"></script>
+
+  <!-- Pour le fond animé et le style -->
+  <link href="style.css" rel="stylesheet"> 
+
+  <title>Calculateur de salaire</title>
+
+  <link rel="icon" type="image/png" href="favicon.png" />
+
+</head>
+
+
+<body>
+
+ <div class="container">
+  <form name="monFormulaire" class="well form-horizontal" method="post"  id="contact_form" onsubmit="return false;">
+
+    <fieldset>
+      <legend><center><h2><b>Calculateur de salaire</b></h2></center></legend><br>
+
+      <!-- Label de saisie : Salaire brut -->
+      <div class="form-group">
+        <label class="col-md-4 control-label">Salaire brut :</label>  
+        <div class="col-md-4 inputGroupContainer">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-euro"></i></span>
+            <input name="grossSalary" id="grossSalary" placeholder="Saisissez votre salaire brut." class="form-control"  type="number" step="0.01">
+          </div>
+        </div>
+      </div>
+
+      <!-- Bonus -->
+      <div class="form-group">
+        <label for="additionBonus" class="col-md-4 control-label"></label>
+        <div class="col-md-4 inputGroupContainer">
+          <div class="checkboxcontainer">
+            <label class="containercheckbox">Bonus&nbsp;
+              <input type="checkbox" id="additionBonus">
+              <span class="checkmark"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Allocation -->
+      <div class="form-group">
+        <label for="additionBonus" class="col-md-4 control-label"></label>
+        <div class="col-md-4 inputGroupContainer">
+          <div class="checkboxcontainer">
+            <label class="containercheckbox">Allocation&nbsp;
+              <input type="checkbox" id="additionAllowance">
+              <span class="checkmark"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Genre -->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="gender">Genre&nbsp;:</label>
+        <div class="col-md-4 selectContainer">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+            <select name="gender" id="gender" class="form-control selectpicker">
+              <option value="M">Homme</option>
+              <option value="F">Femme</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Personnes à charge -->
+      <div class="form-group">
+        <label for="dependents" class="col-md-4 control-label">Personnes à charge&nbsp;:</label>  
+        <div class="col-md-4 inputGroupContainer">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-heart"></i></span>
+            <input id="dependents" placeholder="Personnes à charge." class="form-control"  type="number" >
+          </div>
+        </div>
+      </div>
+
+      <!-- Boutons -->
+      <div class="form-group">
+        <center>
+          <div class="form-group">
+            <label class="col-md-4 control-label"></label>
+            <div class="col-md-4"><br>
+              <button type="submit" class="btn btn-warning" value="Calculer" onclick="Calcul()">Calculer&nbsp;<span class="glyphicon glyphicon-plus"></span></button>
+              <button type="reset" class="btn btn-warning" value="Effacer" onclick="cleanForm()">Effacer&nbsp;<span class="glyphicon glyphicon-minus"></span></button>
+            </div>
+          </div>
+        </center>
+      </div>
+
+      <hr>
+
+      <!-- Champ d'affichage des résultats -->
+      <div class="spangroup">
+        <p>Reduction impôt sur le revenu&nbsp;: <span class="spanclass" id="reducImpo"></span></p>
+        <p>Impôt sur le revenu&nbsp;: <span class="spanclass" id="incomeTaxResult"></span></p>
+
+        <p>Assurance employé&nbsp;: <span class="spanclass" id="employmentInsuranceResult"></span></p>
+        <p>Régime de pensions du Canada&nbsp;: <span class="spanclass" id="canadaPensionPlanResult"></span></p>
+        <p>Suppléments&nbsp;: <span class="spanclass" id="additionsResult"></span></p>
+        <p>Salaire net&nbsp;: <span class="spanclass" id="finalSalaryResult"></span></p>
+      </div>
+    </fieldset>
+  </form>
+</div>
+</body>
+
+<!-- Signature -->
+<footer>
+  <p align="center" id="footerlabel"> © Réalisé par LE ROUX Corentin. </p>
+</footer>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <!-- Js Pour le traitement du form -->
+  <script src="inscription.js"></script>
+
+  <!-- Thème Bootstrap -->
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"> 
+  
+  <!-- Pour le fond animé -->
+  <link href="style.css" rel="stylesheet"> 
+
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <title>Inscription Université</title>
+</head>
+
+
+<body>
+
+  <div class="container">
+    <form name="monFormulaire" class="well form-horizontal" method="post"  id="contact_form" onsubmit="return validateForm()">
+
+      <fieldset>
+        <legend><center><img src="logo_noir_fr.png" alt="logo sorbonne"><h2><b>Inscription</b></h2></center></legend><br>
+
+        <!-- Label de saisie : Nom -->
+        <div class="form-group">
+          <label class="col-md-4 control-label">Nom (*) :</label>  
+          <div class="col-md-4 inputGroupContainer">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+              <input name="nom" id="idNom" placeholder="Saisissez votre nom" class="form-control"  type="text" >
+            </div>
+          </div>
+        </div>
+
+        <!-- Label de saisie : Prénom -->
+        <div class="form-group">
+          <label class="col-md-4 control-label">Prénom (*) :</label>  
+          <div class="col-md-4 inputGroupContainer">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+              <input name="prénom" id="idNom" placeholder="Saisissez votre prénom" class="form-control"  type="text" >
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Label de saisie : CIN -->
+        <div class="form-group">
+          <label class="col-md-4 control-label">CIN (*) :</label>  
+          <div class="col-md-4 inputGroupContainer">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-star"></i></span>
+              <input  name="CIN" placeholder="Saisissez votre numéro CIN" class="form-control"  type="text" >
+            </div>
+          </div>
+        </div>
+
+        <!-- Label de saisie : email -->
+        <div class="form-group">
+          <label class="col-md-4 control-label">Adresse e-mail (*) :</label>  
+          <div class="col-md-4 inputGroupContainer">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+              <input name="email" type="text" placeholder="Saisissez votre adresse e-mail" class="form-control" >
+            </div>
+          </div>
+        </div>
+
+        <!-- Label de saisie : Niveau -->
+        <div class="form-group">
+          <label class="col-md-4 control-label">Niveau : </label>
+          <div class="col-md-4 selectContainer">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+              <select name="niveau" id="idNiveau" class="form-control selectpicker">
+
+                <option value="secondaire" selected="selected">Secondaire</option>
+                <option value="universitaire">Universitaire</option>
+                <option value="autre">Autre</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Label de saisie : Formation -->
+        <div class="form-group"> 
+          <label class="col-md-4 control-label">Module(s) de Formation :</label>
+          <div class="col-md-4 selectContainer">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+              <select multiple="multiple" name="formations" id="formations" class="form-control selectpicker">
+
+                <option value="bureautique" >Bureautique</option> 
+                <option value="se" >SE et Réseaux info.</option> 
+                <option value="tic" >TIC</option> 
+                <option value="gantt" >Gantt</option> 
+                <option value="pert" >Pert</option> 
+                <option value="graphe" >Algo. Graphe</option> 
+                <option value="gpi" >Gestion Projet Inf.</option> 
+                <option value="anglais" >Anglais</option> 
+                <option value="espagnol" >Espagnol</option> 
+                <option value="allemand" >Allemand</option> 
+                <option value="chinois" >Chinois</option> 
+                <option value="JS" >JS</option> 
+                <option value="C++" >C++</option> 
+                <option value="HTML" >HTML</option> 
+              </select>
+              <br>
+              <span id="msg"></span>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Bouton Submit -->
+        <center>
+          <div class="form-group">
+            <label class="col-md-4 control-label"></label>
+            <div class="col-md-4"><br>
+              <button type="submit" class="btn btn-warning" >Envoyer <span class="glyphicon glyphicon-send"></span></button>
+            </div>
+          </div> 
+        </center>
+
+        <hr>
+        <!-- Bouton Annuler -->
+        <input type='reset' value='Annuler' name='reset' class="btn btn-warning" id="buttonreset"> 
+        <p id="champOblig">(*) Champs obligatoires. </p>
+
+      </fieldset>
+
+    </form>
+  </div>
+</body>
+<footer>
+  <p align="center" id="footerlabel"> © Réalisé par LE ROUX Corentin. </p>
+</footer>
+</html>

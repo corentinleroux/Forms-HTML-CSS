@@ -1,0 +1,85 @@
+/*Site gradients : 
+
+- https://uigradients.com/#Titanium 
+- https://webgradients.com/
+ */
+
+body {
+	background: linear-gradient(-45deg, #fddb92 , #d1fdff, #9890e3,#b1f4cf);
+	background-size: 400% 400%;
+	-webkit-animation: gradient 15s ease infinite;
+	        animation: gradient 15s ease infinite;
+}
+
+@-webkit-keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+/* Style du titre et des labels du form */
+		h1, label {
+			color :#404040;
+		}
+
+		/* Style des lignes et colonnes du tableau */
+		td, tr, th {
+			text-align:center ;
+			border:none;
+			font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+		}
+
+		/* Style de la ligne de titre du tableau */
+		th {
+			color : white ;
+			font-family:"Trebuchet MS", Helvetica, sans-serif;
+			font-weight: bold ; 
+			font-size: 16px;
+			background: rgba(25, 25, 25, 0.70);
+			padding-top: 5px;
+			padding-bottom: 5px;
+		}
+
+		/* Style des lignes du tableau */
+		td {
+
+			background: rgba(50, 50, 50, 0.40);
+			font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+			color : white ;
+			font-weight : lighter ;
+			padding-top: 2px;
+			padding-bottom: 2px;
+		}
+
+		/* Style des lignes horizontales */
+		hr {
+			border-color : rgba(64,64,64,0.50);
+			opacity: 50% ;
+		}
+
+		#lastHr {
+			opacity: 0% ; 
+		}
+		/* Style des lignes horizontales */
+		button, #boutonSub {
+			opacity: 80%; 
+		}
+
